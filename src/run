@@ -1,0 +1,38 @@
+#!/bin/bash
+set +x
+set -e
+. .colors.sh
+
+BASEDIR=$PWD
+. $BASEDIR/io.sh 2 7 14 "$@"
+CURDIR=`pwd`
+## INPUTS VARIABLES
+txtinout_zip=${INPUTS1}
+pcp1_pcp=${INPUTS2}
+
+
+## PARAMETERS VARIABLES
+SFTMP=${PARAMS1}
+SMTMP=${PARAMS2}
+SMFMX=${PARAMS3}
+SMFMN=${PARAMS4}
+TIMP=${PARAMS5}
+START_YEAR=${PARAMS6}
+YEARS=${PARAMS7}
+
+
+set -xe
+
+####### WRITE YOUR INVOCATION LINE AFTER THIS COMMENT
+
+cp -rv pcp1.pcp TxtInOut/pcp1.pcp
+
+pushd TxtInOut
+./swat670
+popd
+
+set +x
+echo -e "$(c G)[success] The model has exited with code SUCCESS"
+####### WRITE YOUR INVOCATION LINE BEFORE THIS COMMENT
+cd $BASEDIR
+. $BASEDIR/output.sh
