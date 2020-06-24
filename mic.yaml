@@ -41,7 +41,9 @@ inputs:
   pcp1_pcp:
     path: TxtInOut/pcp1.pcp
     format: pcp
-code_files: {}
+code_files:
+  swat670:
+    path: TxtInOut/swat670
 outputs:
   output_sed:
     path: TxtInOut/output.sed
