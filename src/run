@@ -26,7 +26,7 @@ set -xe
 ####### WRITE YOUR INVOCATION LINE AFTER THIS COMMENT
 
 cp -rv swat670 TxtInOut/swat670
-cp -rv pcp1.pcp TxtInOut/pcp1.pcp
+cp -rv ${pcp1_pcp} TxtInOut/pcp1.pcp
 
 pushd TxtInOut
 ./swat670
