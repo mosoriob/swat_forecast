@@ -27,7 +27,7 @@ set -xe
 
 cp -rv swat670 TxtInOut/swat670
 cp -rv ${pcp1_pcp} TxtInOut/pcp1.pcp
-
+chmod +x TxtInOut/swat670
 pushd TxtInOut
 ./swat670
 popd
