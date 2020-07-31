@@ -1,6 +1,6 @@
 step: 2
 name: swat_forecast
-docker_image: mosorio/swat_forecast:20.7.1
+docker_image: mosorio/swat_forecast:20.7.3
 framework: !!python/object/apply:mic.constants.Framework
 - !!python/tuple
   - general
@@ -88,5 +88,5 @@ outputs:
     path: TxtInOut/fin.fin
     format: fin
 github_repo_url: https://github.com/sirspock/swat_forecast.git
-version: 20.7.1
-mint_component_url: https://raw.githubusercontent.com/sirspock/swat_forecast/master/mint_component.zip
+version: 20.7.3
+mint_component_url: https://raw.githubusercontent.com/mosoriob/swat_forecast/master/mint_component.zip
